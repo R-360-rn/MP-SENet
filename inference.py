@@ -64,7 +64,7 @@ def main():
 
     parser = argparse.ArgumentParser()
     parser.add_argument('--input_clean_wavs_dir', default='VoiceBank+DEMAND/wavs_clean')
-    parser.add_argument('--input_noisy_wavs_dir', default='VoiceBank+DEMAND/wav_noisy')
+    parser.add_argument('--input_noisy_wavs_dir', default='VoiceBank+DEMAND/wavs_noisy')
     parser.add_argument('--input_test_file', default='VoiceBank+DEMAND/test.txt')
     parser.add_argument('--output_dir', default='generated_files')
     parser.add_argument('--checkpoint_file', required=True)
