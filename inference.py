@@ -45,7 +45,7 @@ def inference(a):
     with torch.no_grad():
         for i, index in enumerate(test_indexes):
             print(index)
-            noisy_wav, _ = librosa.load(os.path.join(a.input_noisy_wavs_dir, index+'.wav'), h.sampling_rate)
+            noisy_wav, _ = librosa.load(os.path.join(a.input_noisy_wavs_dir, index+'.wav'), sr=h.sampling_rate)
             noisy_wav = torch.FloatTensor(noisy_wav).to(device)
             norm_factor = torch.sqrt(len(noisy_wav) / torch.sum(noisy_wav ** 2.0)).to(device)
             noisy_wav = (noisy_wav * norm_factor).unsqueeze(0)
